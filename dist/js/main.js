@@ -15,3 +15,14 @@ function startTime() {
     startTime();
   }, 8000);
 }
+
+document.querySelectorAll(".skilldetail").forEach(item =>
+  item.addEventListener("click", function() {
+    document.querySelectorAll(".skilldetail").forEach(item => {
+      if (item != this) {
+        item.classList.remove("show");
+      }
+    });
+    this.classList.toggle("show");
+  })
+);
